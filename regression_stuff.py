@@ -1,5 +1,6 @@
 import numpy as np
 from sklearn import preprocessing,linear_model
+import sklearn.metrics as sm
 import sys
 import matplotlib.pyplot as plt
 
@@ -27,7 +28,8 @@ linear_regressor.fit(x_training,y_training)
 
 y_train_pred    =linear_regressor.predict(x_training)
 
-plt.figure()
-plt.scatter(x_training,y_training,color='red')
-plt.plot(x_training,y_train_pred,color='green')
-plt.show()
+y_test_pred     =linear_regressor.predict(x_test)
+# plt.figure()
+# plt.scatter(x_test,y_test,color='red')
+# plt.plot(x_test,y_test_pred,color='green')
+# plt.show()
